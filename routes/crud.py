@@ -22,11 +22,13 @@ def update(id, data):
     with open("data.json", "r") as file:
         tasks = json.load(file)
 
-    task = tasks[int(id)-1]
-    task["description"] = data
-    task["updated_At"] = datetime.now().isoformat()
+    i = 0
 
-    print(task)
+    for t in tasks:
+         if t["id"] == id:
+            task = tasks[i]
+            task["description"] = data
+            task["updated_At"] = datetime.now().isoformat()
 
     with open("data.json", "w") as file:
         json.dump(tasks, file, indent=4)
@@ -34,8 +36,13 @@ def update(id, data):
 def delete(id):
     with open("data.json", "r") as file:
             tasks = json.load(file)
-    
-    del tasks[int(id)-1]
+
+    i = 0
+
+    for task in tasks:
+        if task["id"] == id:
+            del tasks[i]
+        i += 1
     
     with open("data.json", "w") as file:
         json.dump(tasks, file, indent=4)

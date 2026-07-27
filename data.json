@@ -1,9 +1,9 @@
 [
     {
-        "id": "c046bea2fa2747039c76462784e2855d",
-        "description": "Drink 4L water",
-        "status": "in-progress",
-        "created_At": "2026-07-27T20:04:07.130640",
-        "updated_At": "2026-07-27T20:04:07.130678"
+        "id": "fbb89f5be2964549b062993224de6039",
+        "description": "Drink 4L water.",
+        "status": "todo",
+        "created_At": "2026-07-27T21:22:10.645471",
+        "updated_At": "2026-07-27T21:25:07.663671"
     }
 ]
